@@ -3,11 +3,15 @@
 		case 'cadastrar':
 			$sql = "INSERT INTO usuario (
 						nome_usuario, 
-						senha_usuario, 
+						senha_usuario,
+						pergunta_seguranca_usuario,
+						resposta_seguranca_usuario, 
 						tipo_usuario
 					)VALUES(
 						'".$_POST["nome_usuario"]."', 
-						'".md5($_POST["senha_usuario"])."', 
+						'".md5($_POST["senha_usuario"])."',
+						'".$_POST["pergunta_seguranca_usuario"]."', 
+						'".$_POST["resposta_seguranca_usuario"]."',
 						'".$_POST["tipo_usuario"]."'
 					)";
 
