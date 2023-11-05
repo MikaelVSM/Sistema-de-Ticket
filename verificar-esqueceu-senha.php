@@ -1,5 +1,7 @@
 <?php
 
+use function PHPSTORM_META\exitPoint;
+
 include 'config.php';
 
 	session_start();
@@ -7,6 +9,12 @@ include 'config.php';
 	$usuario = $_POST['nome_usuario'];
 	$pergunta_seguranca_usuario= $_POST['pergunta_seguranca_usuario'];
 	$resposta_seguranca_usuario= $_POST['resposta_seguranca_usuario'];
+
+	if(empty($usuario) || empty($pergunta_seguranca_usuario) || empty($resposta_seguranca_usuario)){
+		print"<script>alert('Por favor, preencha todos os campos');</script>";
+		print"<script>location.href='esqueceu-senha.php';</script>";
+		exit();
+	}
 
 	$sql = "SELECT * FROM usuario
 			WHERE nome_usuario='{$usuario}'
