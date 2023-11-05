@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark mb-5  ">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark mb-5 w-100" style="background-color:Navy;">
+<div class="container-fluid">
     <a class="navbar-brand" href="?page=dashboard"><i class="bi bi-ticket"></i></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse justify-content-around" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="?page=dashboard">Home</a>
@@ -53,5 +53,5 @@
       	<span class="me-2">Olá <?php print $_SESSION["nome"]; ?></span>
       	<a href="?page=logout" class='btn btn-danger btn-sm'>Sair</a>
     </span>	
-  </div>
+</div>
 </nav>
