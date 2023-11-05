@@ -23,3 +23,4 @@
 		print "<script>alert('Usuário e/ou senha incorreto');</script>";
 		print "<script>location.href='index.php';</script>";
 	}
+?>
