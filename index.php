@@ -21,7 +21,10 @@
 							include('verificar.php');
 							break;
 						case 'verificar-esqueceu-senha':
-							include('verificar-esqueceu-senha');
+							include('verificar-esqueceu-senha.php');
+							break;
+						case 'trocar-senha':
+							include('trocar-senha.php');
 							break;
 						case 'dashboard':
 							include('dashboard.php');
