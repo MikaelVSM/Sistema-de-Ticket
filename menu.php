@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark mb-5 w-100" style="background-color:Navy;">
+<nav class="navbar navbar-expand-lg navbar-dark mb-5 w-100" style="background-color:SteelBlue;">
 <div class="container-fluid">
     <a class="navbar-brand" href="?page=dashboard"><i class="bi bi-ticket"></i></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
