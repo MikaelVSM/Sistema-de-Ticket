@@ -63,8 +63,10 @@
         break;
       case 'ticket-encerrado':
         include('ticket-encerrado.php');
+        break;
         case 'ticket-salvar':
           include('ticket-salvar.php');
+        break;
 
     default:
       include('main.php');
