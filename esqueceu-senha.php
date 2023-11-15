@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+// Verifique se o formulário foi submetido
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // limpe e armazene a entrada
+    $nome_usuario = htmlspecialchars(strip_tags($_POST["nome_usuario"]));
+    
+    // armazene na sessão
+    $_SESSION["nome_usuario"] = $nome_usuario;
+    
+    // redirecione para a outra página
+    header("Location: verificar-esqueceu-senha.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
         <head>
