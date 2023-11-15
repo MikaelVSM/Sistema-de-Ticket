@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Verifique se o nome do usuário existe na sessão
+if (isset($_SESSION["nome_usuario"])) {
+    $nome_usuario = $_SESSION["nome_usuario"];
+} else {
+    $nome_usuario = "";
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,8 +24,8 @@
             <div class="offset-lg-4 col-lg-4 mt-5 p-5 card">
                 <form action="update-senha.php" method="POST">
                 <div class="mb-3">
-                        <label>Informe seu Usuário</label>
-                        <input type="text" name="nome_usuario" class="form-control">
+                        <label>Usuário</label>
+                        <input type="text" name="nome_usuario" class="form-control" value="<?php echo $nome_usuario; ?>" readonly>
                     </div>
                     <div class="mb-3">
                         <label>Nova Senha</label>
