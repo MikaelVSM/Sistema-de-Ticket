@@ -1,6 +1,12 @@
 <h1>Listar Departamentos</h1>
-<a href="gerar_PDF_departamento.php">Gerar PDF</a>
+
 <?php
+	// Obter os usuários da sessão
+	$tipo_usuario = $_SESSION['tipo_usuario'];
+
+	// Se o usuário for um administrador 
+	if($tipo_usuario == '1'){
+		echo'<a href="gerar_PDF_departamento.php">Gerar PDF</a>';
 	$sql = "SELECT * FROM departamento";
 
 	$res = $conn->query($sql);
@@ -26,4 +32,27 @@
 	}else{
 		print "<p>Não encontrou resultados</p>";
 	}
+	
+}elseif($tipo_usuario != '1'){
+	$sql = "SELECT * FROM departamento";
+
+	$res = $conn->query($sql);
+
+	if($res->num_rows > 0){
+		print "<table class='table table-bordered table-striped table-hover'>";
+		print "<tr>";
+		print "<th>#</th>";
+		print "<th>Nome do Departamento</th>";
+		print "</tr>";
+		while($row = $res->fetch_object()){
+			print "<tr>";
+			print "<td>".$row->id_departamento."</td>";
+			print "<td>".$row->nome_departamento."</td>";
+			print "</tr>";
+		}
+		print "</table>";
+	}else{
+		print "<p>Não encontrou resultados</p>";
+	}
+}
 ?>

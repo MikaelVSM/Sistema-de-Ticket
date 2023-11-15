@@ -50,7 +50,21 @@
       </ul>      
     </div>
     <span class="navbar-text d-flex">
-      	<span class="me-2">Olá <?php print $_SESSION["nome"]; ?></span>
+      	<span class="me-2" style="margin-right:10px;">Olá, <?php print $_SESSION["nome"]; ?></span>
+        <?php
+            // Obter o tipo do usuário
+            $tipo_usuario = $_SESSION['tipo_usuario'];
+
+            //Mensagem para cada usuário
+            if($tipo_usuario == '1'){
+              echo '<span style="margin-right: 10px;">| Administrador</span>';
+            }elseif($tipo_usuario == '2'){
+              echo '<span style="margin-right: 10px;">| Atendente</span>';
+            }elseif($tipo_usuario == '3'){
+              echo '<span style="margin-right: 10px;">| Usuário</span>';
+            }
+        ?>
+       
       	<a href="?page=logout" class='btn btn-danger btn-sm'>Sair</a>
     </span>	
 </div>

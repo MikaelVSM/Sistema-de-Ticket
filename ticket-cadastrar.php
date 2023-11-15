@@ -19,13 +19,17 @@
 		?>
 	</div>
 	<div class="mb-3">
-		<label>Selecione Usuário</label>
+		<label>Usuário</label>
 		<?php
-			$sql_1 = "SELECT * FROM usuario";
+
+		// Obter usuário da sessão
+		$nome_usuario = $_SESSION['nome'];	
+
+		// Query para buscar apenas o usuário da sessão 
+			$sql_1 = "SELECT * FROM usuario WHERE nome_usuario= '{$nome_usuario}'";
 			$res_1 = $conn->query($sql_1);
 			if($res_1->num_rows > 0){
 				print "<select name='usuario_id_usuario' class='form-control'>";
-				print "<option>-=Escolha=-</option>";
 				while($row_1 = $res_1->fetch_object()){
 					print "<option value='".$row_1->id_usuario."'>".$row_1->nome_usuario."</option>";
 				}

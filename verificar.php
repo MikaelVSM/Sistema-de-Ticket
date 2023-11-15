@@ -17,7 +17,9 @@
 	$res = $conn->query($sql);
 
 	if($res->num_rows > 0){
+		$row = $res->fetch_object();
 		$_SESSION['nome'] = $usuario;
+		$_SESSION['tipo_usuario'] = $row->tipo_usuario;
 		print "<script>location.href='?page=dashboard';</script>";
 	}else{
 		print "<script>alert('Usuário e/ou senha incorreto');</script>";
