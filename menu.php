@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark mb-5 w-100" style="background-color:SteelBlue;">
+<nav class="navbar navbar-expand-lg navbar-dark mb-5 w-100" style="background-color:#1C1C1C;">
 <div class="container-fluid">
     <a class="navbar-brand" href="?page=dashboard"><i class="bi bi-ticket"></i></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,8 +50,21 @@
       </ul>      
     </div>
     <span class="navbar-text d-flex">
-      	<span class="me-2">Olá <?php print $_SESSION["nome"]; ?></span>
-      	<a href="?page=logout" class='btn btn-danger btn-sm'>Sair</a>
+      	<span class="me-2" style="margin-right:10px;">Olá, <?php print $_SESSION["nome"]; ?></span>
+        <?php
+            // Obter o tipo do usuário
+            $tipo_usuario = $_SESSION['tipo_usuario'];
+
+            //Mensagem para cada usuário
+            if($tipo_usuario == '1'){
+              echo '<span style="margin-right: 10px;">| Administrador</span>';
+            }elseif($tipo_usuario == '2'){
+              echo '<span style="margin-right: 10px;">| Atendente</span>';
+            }elseif($tipo_usuario == '3'){
+              echo '<span style="margin-right: 10px;">| Usuário</span>';
+            }
+        ?>
+      	<a href="?page=logout" class='btn-outline-danger'>Sair</a>
     </span>	
 </div>
 </nav>
