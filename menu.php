@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark mb-5 w-100" style="background-color:SteelBlue;">
+<nav class="navbar navbar-expand-lg navbar-dark mb-5 w-100" style="background-color:#060A0D;">
 <div class="container-fluid">
-    <a class="navbar-brand" href="?page=dashboard"><i class="bi bi-ticket"></i></a>
+    <a class="navbar-brand" href="?page=dashboard"><i class="bi bi-sticky-fill"></i></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,7 +20,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           	 Departamento
+           	 Setor
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="?page=dashboard&pag=departamento-listar">Listar</a></li>
@@ -38,7 +38,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           	 Ticket
+           	 Chamados
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="?page=dashboard&pag=ticket-cadastrar">Cadastrar</a></li>

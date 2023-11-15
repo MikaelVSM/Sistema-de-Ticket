@@ -14,7 +14,7 @@ $dados .= "th, td {border: 1px solid black; padding: 8px; text-align: left;}";
 $dados .= "</style>";
 $dados .= "</head>";
 $dados .= "<body>";
-$dados .= "<h1>Tickets em Andamento</h1>";
+$dados .= "<h1>Chamados em Andamento</h1>";
 
 // Incluir conexao com banco de dados
 include_once './config.php';

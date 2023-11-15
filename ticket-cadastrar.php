@@ -1,4 +1,4 @@
-<h1>Cadastrar Ticket</h1>
+<h1>Abrir Chamados</h1>
 <form action="?page=dashboard&pag=ticket-salvar" method="POST">
 	<input type="hidden" name="acao" value="cadastrar">
 	<div class="mb-3">
@@ -40,7 +40,7 @@
 		?>
 	</div>
 	<div class="mb-3">
-		<label>Título do Ticket</label>
+		<label>Título do Chamado</label>
 		<input type="text" name="titulo_ticket" class="form-control">
 	</div>
 	<div class="mb-3">

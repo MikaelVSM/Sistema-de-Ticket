@@ -9,7 +9,7 @@
 
 	// Verificação se o usuário é um administrador
 	if ($tipo_usuario == "1"){
-		echo '<a href="gerar_PDF_usuarios.php">Gerar PDF</a>';
+		echo '<a href="gerar_PDF_usuarios.php" style="color: yellow;">Gerar PDF</a>'; // Link amarelo
 	$sql = "SELECT * FROM usuario";
 	$res = $conn->query($sql);
 	if($res->num_rows > 0){

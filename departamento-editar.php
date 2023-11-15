@@ -1,4 +1,4 @@
-<h1>Editar Departamento</h1>
+<h1>Editar Setor</h1>
 <?php
 	$sql = "SELECT * FROM departamento WHERE id_departamento=".$_REQUEST['id_departamento'];
 
@@ -10,7 +10,7 @@
 	<input type="hidden" name="acao" value="editar">
 	<input type="hidden" name="id_departamento" value="<?php echo $row->id_departamento; ?>">
 	<div class="mb-3">
-		<label>Nome do Departamento</label>
+		<label>Nome do Setor</label>
 		<input type="text" name="nome_departamento" value="<?php echo $row->nome_departamento; ?>" class="form-control">
 	</div>
 	<div class="mb-3">

@@ -11,12 +11,12 @@
 	}
 ?>
 
-<h1>Cadastrar Departamento</h1>
+<h1>Cadastrar Setor</h1>
 
 <form action="?page=dashboard&pag=departamento-salvar" method="POST">
 	<input type="hidden" name="acao" value="cadastrar">
 	<div class="mb-3">
-		<label>Nome do Departamento</label>
+		<label>Nome do Setor</label>
 		<input type="text" name="nome_departamento" class="form-control">
 	</div>
 	<div class="mb-3">

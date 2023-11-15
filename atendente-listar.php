@@ -7,7 +7,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'];
 
 // Verificação se o usuário é um administrador
 if ($tipo_usuario == "1"){
-	echo '<a href="gerar_PDF_atendente.php">Gerar PDF</a>';
+	echo '<a href="gerar_PDF_usuarios.php" style="color: yellow;">Gerar PDF</a>'; // Link amarelo
 	$sql = "SELECT * FROM usuario u
 			INNER JOIN usuario_departamento ud
 			ON u.id_usuario = ud.usuario_id_usuario

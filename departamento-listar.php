@@ -1,4 +1,4 @@
-<h1>Listar Departamentos</h1>
+<h1>Listar Setores</h1>
 
 <?php
 	// Obter os usuários da sessão
@@ -6,7 +6,7 @@
 
 	// Se o usuário for um administrador 
 	if($tipo_usuario == '1'){
-		echo'<a href="gerar_PDF_departamento.php">Gerar PDF</a>';
+		echo '<a href="gerar_PDF_usuarios.php" style="color: yellow;">Gerar PDF</a>'; // Link amarelo
 	$sql = "SELECT * FROM departamento";
 
 	$res = $conn->query($sql);
@@ -15,7 +15,7 @@
 		print "<table class='table table-bordered table-striped table-hover'>";
 		print "<tr>";
 		print "<th>#</th>";
-		print "<th>Nome do Departamento</th>";
+		print "<th>Nome do Setor</th>";
 		print "<th>Ações</th>";
 		print "</tr>";
 		while($row = $res->fetch_object()){
