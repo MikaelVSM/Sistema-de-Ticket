@@ -8,6 +8,18 @@
 	<title>Ticket</title>
 	<link rel="icon"href="imagens/ticketLogo.png">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+		<style>
+			/* Estilo para posicionar o botão no canto direito */
+			#myButton {
+				position: fixed;
+				top: 650px;
+				right: 120px;
+				
+				
+			}
+		</style>
+
+
 </head>
 <body>
 	<div class="container">
@@ -29,6 +41,11 @@
 							break;
 						case 'dashboard':
 							include('dashboard.php');
+							// Botão de atalho para cadastrar ticket
+							if(!isset($_REQUEST['pag'])){
+								echo '<a href="?page=dashboard&pag=ticket-cadastrar" id="myButton" class="btn btn-dark rounded-circle" 
+								style="width: 60px; height: 60px; align-items:center; justify-content:center; display: flex;"><span style="font-size: 30px;">+</span></a>';
+							}
 							break;
 						case 'logout':
 							include('logout.php');
@@ -41,6 +58,6 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>';
 </body>
 </html>
